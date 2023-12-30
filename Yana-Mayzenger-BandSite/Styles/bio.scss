@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@import "./Partials/about";
+@import "./Partials/breakpoints";
+@import "./Partials/colors";
+@import "./Partials/fonts";
+@import "./Partials/footer";
+@import "./Partials/hero";
+@import "./Partials/navbar";
+@import "./Partials/gallery.scss";
+@import "./Partials/mixins";
