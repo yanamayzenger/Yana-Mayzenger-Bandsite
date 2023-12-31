@@ -16,14 +16,112 @@ body {
 @font-face {
   font-family: avenir-regular;
   src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf");
-}
-@font-face {
-  font-family: avenir-bold;
-  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf");
+  font-weight: 400;
 }
 @font-face {
   font-family: avenir-demi;
   src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: avenir-bold;
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 0 1rem;
+  font-family: "avenir-regular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.footer__title {
+  font-family: "avenir-bold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 2rem 0 1.5rem 0;
+}
+.footer__social {
+  padding-bottom: 2rem;
+}
+.footer__social-link {
+  margin-right: 1.6rem;
+}
+.footer__logo {
+  display: none;
+}
+.footer__contact-name {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding-bottom: 1.25rem;
+}
+.footer__contact-location, .footer__contact-link {
+  color: #afafaf;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+.footer__copyright {
+  color: #afafaf;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .footer__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding: 3rem 0 3.5rem 0;
+  }
+  .footer__social {
+    padding: 0 8rem 0 0;
+  }
+  .footer__social-link {
+    margin-right: 2rem;
+  }
+  .footer__logo {
+    display: inherit;
+    max-width: 120px;
+    max-height: 20px;
+  }
+  .footer__contact {
+    padding-right: 1.875rem;
+  }
+  .footer__contact-name {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer__contact-container {
+    display: flex;
+    justify-content: left;
+  }
+  .footer__contact-location {
+    padding-bottom: 0.25rem;
+  }
+  .footer__contact-link {
+    margin-bottom: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer {
+    padding: 0 11rem;
+  }
+  .footer__social {
+    padding-right: 30rem;
+  }
+  .footer__contact {
+    padding-right: 3.25rem;
+  }
 }
 .header__nav {
   font-family: "avenir-regular";
