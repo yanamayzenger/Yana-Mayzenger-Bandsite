@@ -1,16 +1,16 @@
 @font-face {
-  font-family: avenir;
-  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf");
+  font-family: "avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
   font-weight: 400;
 }
 @font-face {
-  font-family: avenir;
-  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf");
+  font-family: "avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format("truetype");
   font-weight: 600;
 }
 @font-face {
-  font-family: avenir;
-  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf");
+  font-family: "avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format("truetype");
   font-weight: 700;
 }
 * {
@@ -23,6 +23,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "avenir";
 }
 
 /* media query for mobile*/
@@ -32,7 +33,7 @@ body {
 /* media query for tablet*/
 /* media query desktops*/
 .header__nav {
-  font-family: avenir;
+  font-family: "avenir";
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,7 +161,7 @@ body {
   align-content: center;
   position: relative;
 }
-.hero_background {
+.hero__background {
   position: absolute;
   top: 0;
   left: 0;
@@ -172,7 +173,7 @@ body {
 }
 .hero__title {
   position: absolute;
-  font-family: avenir;
+  font-family: "avenir";
   color: #ffffff;
   font-size: 1.5rem;
   width: 13rem;
@@ -210,6 +211,7 @@ body {
 
 .about {
   margin: 0 1rem;
+  color: #323232;
 }
 .about__intro {
   display: flex;
@@ -217,7 +219,7 @@ body {
   align-items: flex-start;
 }
 .about__intro-title {
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
@@ -232,7 +234,7 @@ body {
      object-fit: cover;
 }
 .about__intro-quote {
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 0.875rem;
   line-height: 1.375rem;
   padding-bottom: 1rem;
@@ -240,7 +242,7 @@ body {
 }
 .about__intro-quote-person {
   padding-bottom: 2rem;
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -252,19 +254,21 @@ body {
   justify-content: space-between;
 }
 .about__bio-name {
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 0.875rem;
   line-height: 1.375rem;
   margin: 0 0 1.5rem 0;
 }
 .about__bio-container--one {
-  font-family: avenir;
+  font-family: "avenir";
+  font-weight: 400;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   margin: 0 0 1rem 0;
 }
 .about__bio-container--two {
-  font-family: avenir;
+  font-family: "avenir";
+  font-weight: 400;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   margin: 0 0 1.5rem 0;
@@ -288,7 +292,7 @@ body {
        object-fit: cover;
   }
   .about__intro-quote {
-    font-family: avenir;
+    font-family: "avenir";
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 2.25rem 7rem 2.25rem 10rem;
@@ -335,7 +339,7 @@ body {
     margin-left: 13rem;
   }
   .about__intro-quote {
-    font-family: avenir;
+    font-family: "avenir";
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 2.25rem 21rem 1rem 13rem;
@@ -364,10 +368,11 @@ body {
   padding: 1.5rem 1rem 1rem;
 }
 .gallery__title {
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 0;
+  color: #323232;
 }
 .gallery__images {
   display: flex;
@@ -388,7 +393,7 @@ body {
     padding: 3rem 2.25rem 2.25rem;
   }
   .gallery__title {
-    font-family: avenir;
+    font-family: "avenir";
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-top: 3rem;
@@ -411,7 +416,7 @@ body {
     padding: 3rem 2.25rem 2.25rem;
   }
   .gallery__title {
-    font-family: avenir;
+    font-family: "avenir";
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-top: 3rem;
@@ -434,12 +439,12 @@ body {
   background-color: #323232;
   color: #ffffff;
   padding: 0 1rem;
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
 .footer__title {
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 1.5rem;
   line-height: 2rem;
   padding: 2rem 0 1.5rem 0;

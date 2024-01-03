@@ -1,13 +1,13 @@
 .about {
   margin: 0 1rem;
-
+  color: $black;
   &__intro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     &-title {
-      font-family: avenir;
+      font-family: "avenir";
       font-size: 1.5rem;
       font-weight: 700;
       line-height: 2rem;
@@ -23,7 +23,7 @@
     }
 
     &-quote {
-      font-family: avenir;
+      font-family: "avenir";
       font-size: 0.875rem;
       line-height: 1.375rem;
       padding-bottom: 1rem;
@@ -31,7 +31,7 @@
 
       &-person {
         padding-bottom: 2rem;
-        font-family: avenir;
+        font-family: "avenir";
         font-size: 0.875rem;
         line-height: 1.375rem;
         font-weight: 600;
@@ -45,19 +45,21 @@
     align-items: flex-start;
     justify-content: space-between;
     &-name {
-      font-family: avenir;
+      font-family: "avenir";
       font-size: 0.875rem;
       line-height: 1.375rem;
       margin: 0 0 1.5rem 0;
     }
     &-container--one {
-      font-family: avenir;
+      font-family: "avenir";
+      font-weight: 400;
       font-size: 0.8125rem;
       line-height: 1.125rem;
       margin: 0 0 1rem 0;
     }
     &-container--two {
-      font-family: avenir;
+      font-family: "avenir";
+      font-weight: 400;
       font-size: 0.8125rem;
       line-height: 1.125rem;
       margin: 0 0 1.5rem 0;
@@ -80,7 +82,7 @@
         object-fit: cover;
       }
       &-quote {
-        font-family: avenir;
+        font-family: "avenir";
         font-size: 1.5rem;
         line-height: 2rem;
         margin: 2.25rem 7rem 2.25rem 10rem;
@@ -132,7 +134,7 @@
         margin-left: 13rem;
       }
       &-quote {
-        font-family: avenir;
+        font-family: "avenir";
         font-size: 1.5rem;
         line-height: 2rem;
         margin: 2.25rem 21rem 1rem 13rem;
