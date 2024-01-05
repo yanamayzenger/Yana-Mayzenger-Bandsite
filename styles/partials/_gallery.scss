@@ -1,13 +1,13 @@
 .gallery {
   background-color: $alabaster;
   padding: 1.5rem 1rem 1rem;
+  color: $black;
 
   &__title {
     font-family: "avenir";
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 0;
-    color: $black;
   }
 
   &__images {
