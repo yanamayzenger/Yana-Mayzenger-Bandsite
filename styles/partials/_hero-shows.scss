@@ -1,0 +1,102 @@
+.hero__shows {
+  background-image: url("../../assets/images/hero-shows.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  width: 100vw;
+  height: 29.5rem;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  position: relative;
+
+  &-container {
+    background-color: rgba($color: black, $alpha: 0.5);
+    width: 100vw;
+    height: 29.5rem;
+    padding: 0 1rem 0 1rem;
+  }
+  &-subtitle {
+    font-family: "avenir";
+    color: $white;
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 4rem 0 0 0;
+  }
+  &-title {
+    font-family: "avenir";
+    color: $white;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding: 1rem 0 4rem 0;
+    margin: 0;
+  }
+  &-song-container {
+    width: 18rem;
+    height: 6rem;
+  }
+}
+
+@include tablet {
+  .hero-shows {
+    width: 100vw;
+    height: 41.875rem;
+    &-container {
+      width: 100vw;
+      height: 41.875rem;
+      padding: 0 1.5rem 0 1.5rem;
+    }
+    &-subtitle {
+      font-size: 1.5rem;
+      font-family: "avenir";
+      padding: 6rem 0 0 0;
+    }
+    &-title {
+      width: 37.8125rem;
+      padding: 3rem 0 4rem 0;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+    }
+    &-song {
+      width: 27.25rem;
+      height: 9.125rem;
+    }
+  }
+}
+
+@include desktop {
+  .hero__shows {
+    width: 100vw;
+    height: 41.875rem;
+    &-container {
+      width: 100vw;
+      height: 41.875rem;
+      padding: 0 11.25rem 0 11.25rem;
+      display: flex;
+    }
+
+    &-subtitle {
+      font-size: 1.5rem;
+      font-family: "avenir";
+      padding: 10rem 0 0 0;
+    }
+    &-title {
+      width: 39.8125rem;
+      padding: 3rem 4rem 0 0;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+    }
+    &-song-container {
+      height: 26rem;
+      display: flex;
+      align-items: flex-end;
+      padding-left: 5rem;
+    }
+    &-song {
+      width: 27.25rem;
+      height: 9.125rem;
+    }
+  }
+}
