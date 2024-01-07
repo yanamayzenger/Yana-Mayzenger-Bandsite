@@ -1,6 +1,7 @@
 .comment {
   background-color: $white;
   margin: 0 1rem 0 1rem;
+  padding-bottom: 1rem;
 
   &__title {
     font-family: "avenir";
@@ -9,15 +10,17 @@
   }
 
   &__image {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 2rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: $mercury;
+    object-fit: cover;
     margin-top: 1.4rem;
   }
 
   &__name-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border-bottom: 1px solid $mercury;
   }
 
@@ -29,32 +32,37 @@
       color: $silver;
       font-size: 0.75rem;
       line-height: 1.25rem;
-      margin: 0 0 0.5rem 0;
+      margin: 4px 0;
     }
   }
 
   &__text-container {
     font-family: "avenir";
     font-size: 0.8125rem;
-    border: 1px solid $black;
-    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    border-radius: 4px;
     width: 14rem;
+    padding: 12px;
     background-color: $alabaster;
     border-color: $silver;
     resize: none;
     &:focus {
-      border: 2px solid $black;
+      border: 1px solid $black;
       outline-width: 0;
     }
+    &--error {
+      border: 1px solid $error;
+    }
     &--one {
-      margin: 0 0 0.5rem 0;
-      height: 2.5rem;
-      padding: 0.625rem;
+      padding: 12px;
+      margin: 0 0 4px 0;
+      height: 36px;
     }
     &--two {
       padding: 0.625rem 0.625rem 3.125rem 0.625rem;
-      margin: 0 0 0.5rem 0;
-      height: 5rem;
+      height: 36px;
+      padding: 12px;
+      margin: 0 0 4px 0;
     }
   }
 
@@ -63,7 +71,7 @@
     background-color: $black;
     border-style: none;
     height: 2.5rem;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     color: $white;
     text-align: center;
     width: 14rem;
@@ -127,6 +135,7 @@
   .comment {
     background-color: $white;
     margin: 0 1.5rem 0 1.5rem;
+    padding-bottom: 2.25rem;
 
     &__title {
       font-family: "avenir";
@@ -165,32 +174,38 @@
         color: $silver;
         font-size: 0.75rem;
         line-height: 1.25rem;
-        margin: 0 0 0.5rem 0;
+        margin: 4px 0;
       }
     }
 
     &__text-container {
       font-family: "avenir";
       font-size: 1rem;
-      border: 1px solid $black;
-      border-radius: 0.25rem;
+      border: 1px solid $mercury;
+      padding: 16px;
+      border-radius: 4px;
       width: 28.75rem;
       background-color: $alabaster;
       border-color: $silver;
       resize: none;
+      height: 48px;
       &:focus {
         border: 1px solid $black;
         outline-width: 0;
       }
+      &--error {
+        border: 1px solid $error;
+      }
       &--one {
-        margin: 0 0 1.5rem 0;
-        height: 3rem;
         padding: 0.625rem 1rem 0 1rem;
+        margin: 0 0 4px 0;
+        height: 48px;
       }
       &--two {
         padding: 0.625rem 1rem 0 1rem;
-        height: 6rem;
         margin: 0 0 1.5rem 0;
+        height: 48px;
+        padding: 16px;
       }
     }
 
@@ -200,7 +215,7 @@
       background-color: $black;
       border-style: none;
       height: 3rem;
-      border-radius: 0.25rem;
+      border-radius: 4px;
       color: $white;
       text-align: center;
       width: 10rem;
@@ -226,7 +241,7 @@
     &__header {
       position: relative;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       &--image-one {
         position: absolute;
         height: 3rem;
@@ -307,8 +322,9 @@
     &__text-container {
       font-family: "avenir";
       font-size: 0.8125rem;
-      border: 1px solid $black;
-      border-radius: 0.25rem;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      padding: 16px;
       width: 28.75rem;
       background-color: $alabaster;
       border-color: $silver;
@@ -317,15 +333,18 @@
         border: 1px solid $black;
         outline-width: 0;
       }
+      &--error {
+        border: 1px solid $error;
+      }
       &--one {
-        margin: 0 0 1.5rem 0;
-        height: 3rem;
         padding: 0.625rem 1rem 0 1rem;
+        margin: 0 0 4px 0;
+        height: 48px;
       }
       &--two {
         padding: 0.625rem 1rem 0 1rem;
-        height: 6rem;
-        margin: 0 0 1.5rem 0;
+        margin: 0 0 4px 0;
+        height: 48px;
       }
     }
 
@@ -335,7 +354,7 @@
       background-color: $black;
       border-style: none;
       height: 3rem;
-      border-radius: 0.25rem;
+      border-radius: 4px;
       color: $white;
       text-align: center;
       width: 10rem;

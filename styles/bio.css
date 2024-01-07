@@ -511,6 +511,7 @@ body {
 .comment {
   background-color: #ffffff;
   margin: 0 1rem 0 1rem;
+  padding-bottom: 1rem;
 }
 .comment__title {
   font-family: "avenir";
@@ -518,14 +519,17 @@ body {
   margin: 2rem 0 2.5rem;
 }
 .comment__image {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 1.4rem;
 }
 .comment__name-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-bottom: 1px solid #e1e1e1;
 }
 .comment__input-container {
@@ -537,38 +541,43 @@ body {
   color: #afafaf;
   font-size: 0.75rem;
   line-height: 1.25rem;
-  margin: 0 0 0.5rem 0;
+  margin: 4px 0;
 }
 .comment__text-container {
   font-family: "avenir";
   font-size: 0.8125rem;
-  border: 1px solid #323232;
-  border-radius: 0.25rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
   width: 14rem;
+  padding: 12px;
   background-color: #fafafa;
   border-color: #afafaf;
   resize: none;
 }
 .comment__text-container:focus {
-  border: 2px solid #323232;
+  border: 1px solid #323232;
   outline-width: 0;
 }
+.comment__text-container--error {
+  border: 1px solid #d22d2d;
+}
 .comment__text-container--one {
-  margin: 0 0 0.5rem 0;
-  height: 2.5rem;
-  padding: 0.625rem;
+  padding: 12px;
+  margin: 0 0 4px 0;
+  height: 36px;
 }
 .comment__text-container--two {
   padding: 0.625rem 0.625rem 3.125rem 0.625rem;
-  margin: 0 0 0.5rem 0;
-  height: 5rem;
+  height: 36px;
+  padding: 12px;
+  margin: 0 0 4px 0;
 }
 .comment__button {
   font-family: "avenir";
   background-color: #323232;
   border-style: none;
   height: 2.5rem;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #ffffff;
   text-align: center;
   width: 14rem;
@@ -629,6 +638,7 @@ body {
   .comment {
     background-color: #ffffff;
     margin: 0 1.5rem 0 1.5rem;
+    padding-bottom: 2.25rem;
   }
   .comment__title {
     font-family: "avenir";
@@ -663,31 +673,37 @@ body {
     color: #afafaf;
     font-size: 0.75rem;
     line-height: 1.25rem;
-    margin: 0 0 0.5rem 0;
+    margin: 4px 0;
   }
   .comment__text-container {
     font-family: "avenir";
     font-size: 1rem;
-    border: 1px solid #323232;
-    border-radius: 0.25rem;
+    border: 1px solid #e1e1e1;
+    padding: 16px;
+    border-radius: 4px;
     width: 28.75rem;
     background-color: #fafafa;
     border-color: #afafaf;
     resize: none;
+    height: 48px;
   }
   .comment__text-container:focus {
     border: 1px solid #323232;
     outline-width: 0;
   }
+  .comment__text-container--error {
+    border: 1px solid #d22d2d;
+  }
   .comment__text-container--one {
-    margin: 0 0 1.5rem 0;
-    height: 3rem;
     padding: 0.625rem 1rem 0 1rem;
+    margin: 0 0 4px 0;
+    height: 48px;
   }
   .comment__text-container--two {
     padding: 0.625rem 1rem 0 1rem;
-    height: 6rem;
     margin: 0 0 1.5rem 0;
+    height: 48px;
+    padding: 16px;
   }
   .comment__button {
     font-family: "avenir";
@@ -695,7 +711,7 @@ body {
     background-color: #323232;
     border-style: none;
     height: 3rem;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     color: #ffffff;
     text-align: center;
     width: 10rem;
@@ -718,7 +734,7 @@ body {
   .comment__header {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   .comment__header--image-one {
     position: absolute;
@@ -792,8 +808,9 @@ body {
   .comment__text-container {
     font-family: "avenir";
     font-size: 0.8125rem;
-    border: 1px solid #323232;
-    border-radius: 0.25rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 16px;
     width: 28.75rem;
     background-color: #fafafa;
     border-color: #afafaf;
@@ -803,15 +820,18 @@ body {
     border: 1px solid #323232;
     outline-width: 0;
   }
+  .comment__text-container--error {
+    border: 1px solid #d22d2d;
+  }
   .comment__text-container--one {
-    margin: 0 0 1.5rem 0;
-    height: 3rem;
     padding: 0.625rem 1rem 0 1rem;
+    margin: 0 0 4px 0;
+    height: 48px;
   }
   .comment__text-container--two {
     padding: 0.625rem 1rem 0 1rem;
-    height: 6rem;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 4px 0;
+    height: 48px;
   }
   .comment__button {
     font-family: "avenir";
@@ -819,7 +839,7 @@ body {
     background-color: #323232;
     border-style: none;
     height: 3rem;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     color: #ffffff;
     text-align: center;
     width: 10rem;
