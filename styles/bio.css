@@ -508,6 +508,330 @@ body {
   }
 }
 
+.comment {
+  background-color: #ffffff;
+  margin: 0 1rem 0 1rem;
+}
+.comment__title {
+  font-family: "avenir";
+  font-size: 1.5rem;
+  margin: 2rem 0 2.5rem;
+}
+.comment__image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+  margin-top: 1.4rem;
+}
+.comment__name-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+}
+.comment__input-container {
+  display: flex;
+  flex-direction: column;
+}
+.comment__input-container--text {
+  font-family: "avenir";
+  color: #afafaf;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+.comment__text-container {
+  font-family: "avenir";
+  font-size: 0.8125rem;
+  border: 1px solid #323232;
+  border-radius: 0.25rem;
+  width: 14rem;
+  background-color: #fafafa;
+  border-color: #afafaf;
+  resize: none;
+}
+.comment__text-container:focus {
+  border: 2px solid #323232;
+  outline-width: 0;
+}
+.comment__text-container--one {
+  margin: 0 0 0.5rem 0;
+  height: 2.5rem;
+  padding: 0.625rem;
+}
+.comment__text-container--two {
+  padding: 0.625rem 0.625rem 3.125rem 0.625rem;
+  margin: 0 0 0.5rem 0;
+  height: 5rem;
+}
+.comment__button {
+  font-family: "avenir";
+  background-color: #323232;
+  border-style: none;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  text-align: center;
+  width: 14rem;
+  margin: 0 0 2rem 0;
+  outline-width: 0;
+  padding: 0;
+}
+.comment__button:hover {
+  background-color: black;
+}
+.comment__default {
+  border-bottom: 1px solid #e1e1e1;
+}
+.comment__header {
+  display: flex;
+  justify-content: space-between;
+}
+.comment__header--image-one {
+  height: 3rem;
+  width: 3rem;
+  background-color: #e1e1e1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+}
+.comment__header--name {
+  color: #323232;
+  font-family: "avenir";
+  font-size: 0.8125rem;
+  padding: 1.75rem 0 0 1rem;
+  margin: 0;
+}
+.comment__header--date {
+  color: #afafaf;
+  font-family: "avenir";
+  font-size: 0.8125rem;
+  margin: 0;
+  padding: 1.75rem 0 0 0;
+  font-weight: 400;
+}
+.comment__text-container-default {
+  display: flex;
+}
+.comment__text-container-default--comment {
+  word-wrap: break-word;
+  width: 96%;
+  color: #323232;
+  font-size: 0.8125rem;
+  font-family: "avenir";
+  margin: 0;
+  padding: 1rem 0 1.5rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .comment {
+    background-color: #ffffff;
+    margin: 0 1.5rem 0 1.5rem;
+  }
+  .comment__title {
+    font-family: "avenir";
+    font-size: 2.25rem;
+    margin: 3rem 0 3.5rem;
+  }
+  .comment__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin: 1.4rem 1.25rem 0 0;
+  }
+  .comment__name-container {
+    display: flex;
+    justify-content: center;
+    border: none;
+  }
+  .comment__border-container {
+    display: flex;
+    justify-content: center;
+  }
+  .comment__border {
+    width: 33rem;
+    border: 1px solid #e1e1e1;
+  }
+  .comment__input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment__input-container--text {
+    font-family: "avenir";
+    color: #afafaf;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0 0 0.5rem 0;
+  }
+  .comment__text-container {
+    font-family: "avenir";
+    font-size: 1rem;
+    border: 1px solid #323232;
+    border-radius: 0.25rem;
+    width: 28.75rem;
+    background-color: #fafafa;
+    border-color: #afafaf;
+    resize: none;
+  }
+  .comment__text-container:focus {
+    border: 1px solid #323232;
+    outline-width: 0;
+  }
+  .comment__text-container--one {
+    margin: 0 0 1.5rem 0;
+    height: 3rem;
+    padding: 0.625rem 1rem 0 1rem;
+  }
+  .comment__text-container--two {
+    padding: 0.625rem 1rem 0 1rem;
+    height: 6rem;
+    margin: 0 0 1.5rem 0;
+  }
+  .comment__button {
+    font-family: "avenir";
+    font-size: 1rem;
+    background-color: #323232;
+    border-style: none;
+    height: 3rem;
+    border-radius: 0.25rem;
+    color: #ffffff;
+    text-align: center;
+    width: 10rem;
+    margin: 0 0 1.5rem 0;
+    outline-width: 0;
+    padding: 0;
+    align-self: flex-end;
+  }
+  .comment__button:hover {
+    background-color: black;
+  }
+  .comment__default-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .comment__default {
+    width: 528px;
+  }
+  .comment__header {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .comment__header--image-one {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+  }
+  .comment__header--name {
+    color: #323232;
+    font-family: "avenir";
+    font-size: 1rem;
+    padding: 1.75rem 1rem 0 3.9375rem;
+    margin: 0;
+  }
+  .comment__header--date {
+    color: #afafaf;
+    font-family: "avenir";
+    font-size: 1rem;
+    margin: 0;
+    padding: 1.75rem 0 0 0;
+  }
+  .comment__text-container-default {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .comment__text-container-default--comment {
+    color: #323232;
+    width: 29rem;
+    font-size: 0.875rem;
+    font-family: "avenir";
+    margin: 0;
+    padding: 1rem 0 1.5rem 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comment {
+    background-color: #ffffff;
+    margin: 0 11.25rem 0 11.25rem;
+  }
+  .comment__title {
+    font-family: "avenir";
+    font-size: 2.25rem;
+    margin: 3rem 0 3.5rem;
+  }
+  .comment__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin: 1.4rem 1.25rem 0 0;
+  }
+  .comment__name-container {
+    display: flex;
+    justify-content: center;
+  }
+  .comment__input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment__input-container--text {
+    font-family: "avenir";
+    color: #afafaf;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0 0 0.5rem 0;
+  }
+  .comment__text-container {
+    font-family: "avenir";
+    font-size: 0.8125rem;
+    border: 1px solid #323232;
+    border-radius: 0.25rem;
+    width: 28.75rem;
+    background-color: #fafafa;
+    border-color: #afafaf;
+    resize: none;
+  }
+  .comment__text-container:focus {
+    border: 1px solid #323232;
+    outline-width: 0;
+  }
+  .comment__text-container--one {
+    margin: 0 0 1.5rem 0;
+    height: 3rem;
+    padding: 0.625rem 1rem 0 1rem;
+  }
+  .comment__text-container--two {
+    padding: 0.625rem 1rem 0 1rem;
+    height: 6rem;
+    margin: 0 0 1.5rem 0;
+  }
+  .comment__button {
+    font-family: "avenir";
+    font-size: 1rem;
+    background-color: #323232;
+    border-style: none;
+    height: 3rem;
+    border-radius: 0.25rem;
+    color: #ffffff;
+    text-align: center;
+    width: 10rem;
+    margin: 0 0 1.5rem 0;
+    outline-width: 0;
+    padding: 0;
+    align-self: flex-end;
+  }
+  .comment__button:hover {
+    background-color: black;
+  }
+}
 .footer {
   background-color: #323232;
   color: #ffffff;
