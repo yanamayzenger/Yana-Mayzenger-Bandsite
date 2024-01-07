@@ -171,34 +171,34 @@
   margin: 0;
 }
 .hero__shows-song-container {
-  width: 18rem;
+  width: 38rem;
   height: 6rem;
 }
 
 @media only screen and (min-width: 768px) {
-  .hero-shows {
+  .hero__shows {
     width: 100vw;
     height: 41.875rem;
   }
-  .hero-shows-container {
+  .hero__shows-container {
     width: 100vw;
     height: 41.875rem;
     padding: 0 1.5rem 0 1.5rem;
   }
-  .hero-shows-subtitle {
+  .hero__shows-subtitle {
     font-size: 1.5rem;
     font-family: "avenir";
     padding: 6rem 0 0 0;
   }
-  .hero-shows-title {
+  .hero__shows-title {
     width: 37.8125rem;
     padding: 3rem 0 4rem 0;
     font-size: 3.75rem;
     line-height: 4.25rem;
   }
-  .hero-shows-song {
-    width: 27.25rem;
-    height: 9.125rem;
+  .hero__shows-song {
+    width: 27rem;
+    height: 9rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -230,8 +230,8 @@
     padding-left: 5rem;
   }
   .hero__shows-song {
-    width: 27.25rem;
-    height: 9.125rem;
+    width: 27rem;
+    height: 9rem;
   }
 }
 /*MOBILE SIZING*/
@@ -245,8 +245,8 @@
   color: #323232;
   padding-bottom: 1rem;
   font-family: "avenir";
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 24px;
+  line-height: 32px;
 }
 .shows__new {
   padding: 1.5rem 0 1rem 0;
@@ -309,8 +309,9 @@
     flex-direction: column;
   }
   .shows__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
     padding-bottom: 1.5rem;
   }
   .shows__top {

@@ -8,8 +8,8 @@
     color: $black;
     padding-bottom: 1rem;
     font-family: "avenir";
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 24px;
+    line-height: 32px;
   }
   &__new {
     padding: 1.5rem 0 1rem 0;
@@ -75,8 +75,9 @@
     display: flex;
     flex-direction: column;
     &__title {
-      font-size: 2.25rem;
-      line-height: 2.75rem;
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
       padding-bottom: 1.5rem;
     }
     &__top {

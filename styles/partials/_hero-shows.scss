@@ -1,6 +1,5 @@
 .hero__shows {
   background-image: url("../../assets/images/hero-shows.jpg");
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,6 +15,7 @@
     background-color: rgba($color: black, $alpha: 0.5);
     width: 100vw;
     height: 29.5rem;
+
     padding: 0 1rem 0 1rem;
   }
   &-subtitle {
@@ -34,13 +34,13 @@
     margin: 0;
   }
   &-song-container {
-    width: 18rem;
+    width: 38rem;
     height: 6rem;
   }
 }
 
 @include tablet {
-  .hero-shows {
+  .hero__shows {
     width: 100vw;
     height: 41.875rem;
     &-container {
@@ -60,8 +60,8 @@
       line-height: 4.25rem;
     }
     &-song {
-      width: 27.25rem;
-      height: 9.125rem;
+      width: 27rem;
+      height: 9rem;
     }
   }
 }
@@ -95,8 +95,8 @@
       padding-left: 5rem;
     }
     &-song {
-      width: 27.25rem;
-      height: 9.125rem;
+      width: 27rem;
+      height: 9rem;
     }
   }
 }
