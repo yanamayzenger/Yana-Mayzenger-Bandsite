@@ -20,7 +20,6 @@
   &__date,
   &__venue,
   &__location {
-    // display: none;
     color: $silver;
     padding-bottom: 1rem;
     font-family: "avenir";
@@ -57,15 +56,26 @@
     border-radius: 0.25rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
-    &:focus {
-      outline-width: 0;
-    }
+  }
+}
+.shows__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .shows__new {
+    padding: 16px;
+
     &:hover {
-      background-color: black;
+      background-color: $alabaster;
+    }
+
+    &.selected-show {
+      background-color: $mercury;
     }
   }
 }
-
 /*TABLET SIZING*/
 @include tablet {
   .shows {
@@ -82,7 +92,9 @@
     }
     &__top {
       display: flex;
+      width: 40rem;
       justify-content: space-between;
+      padding-left: 1rem;
       font-family: "avenir";
       color: $silver;
       &-venue,
@@ -120,10 +132,12 @@
     &__location-actual {
       font-size: 0.875rem;
       line-height: 1.375rem;
+      font-weight: 400;
     }
     &__venue-actual {
       font-size: 0.875rem;
       line-height: 1.375rem;
+      font-weight: 400;
     }
     &__button {
       width: 10rem;
@@ -138,18 +152,29 @@
 /*DESKTOP SIZING*/
 @include desktop {
   .shows {
-    padding: 2.5rem 11.25rem;
+    padding: 2.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    &__container {
-      width: 50.25rem;
+    justify-content: flex-start;
+
+    &__title {
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+      padding: 0 15rem 1.5rem 10rem;
+      align-self: flex-start;
     }
+
     &__new {
       padding: 1rem 0;
     }
     &__top {
       padding-bottom: 0.75rem;
+      justify-content: flex-start;
+      padding-left: 1rem;
     }
   }
+}
+.shows__container {
+  padding-top: 1.35rem;
 }

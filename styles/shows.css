@@ -136,34 +136,29 @@
     border-bottom: 0.4125rem solid transparent;
   }
 }
+/* mobile-styling-start */
 .hero__shows {
+  width: 100vw;
+  height: 29.5rem;
   background-image: url("../../assets/images/hero-shows.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  color: #ffffff;
-  width: 100vw;
-  height: 29.5rem;
-  display: flex;
-  justify-content: left;
-  align-content: center;
-  position: relative;
 }
 .hero__shows-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100vw;
-  height: 29.5rem;
+  height: 472px;
+  background-color: rgba(50, 50, 50, 0.5);
   padding: 0 1rem 0 1rem;
 }
 .hero__shows-subtitle {
-  font-family: "avenir";
+  font-family: avenir;
   color: #ffffff;
   font-size: 0.875rem;
   margin: 0;
   padding: 4rem 0 0 0;
 }
 .hero__shows-title {
-  font-family: "avenir";
+  font-family: avenir;
   color: #ffffff;
   font-size: 2.25rem;
   line-height: 2.75rem;
@@ -171,10 +166,11 @@
   margin: 0;
 }
 .hero__shows-song-container {
-  width: 38rem;
+  width: 18rem;
   height: 6rem;
 }
 
+/* tablet-styling-start */
 @media only screen and (min-width: 768px) {
   .hero__shows {
     width: 100vw;
@@ -187,7 +183,7 @@
   }
   .hero__shows-subtitle {
     font-size: 1.5rem;
-    font-family: "avenir";
+    font-family: avenir;
     padding: 6rem 0 0 0;
   }
   .hero__shows-title {
@@ -196,11 +192,12 @@
     font-size: 3.75rem;
     line-height: 4.25rem;
   }
-  .hero__shows-song {
-    width: 27rem;
-    height: 9rem;
+  .hero__shows-song-container {
+    width: 30rem;
+    height: 6rem;
   }
 }
+/* desktop-styling-start */
 @media only screen and (min-width: 1280px) {
   .hero__shows {
     width: 100vw;
@@ -209,12 +206,11 @@
   .hero__shows-container {
     width: 100vw;
     height: 41.875rem;
-    padding: 0 11.25rem 0 11.25rem;
     display: flex;
   }
   .hero__shows-subtitle {
     font-size: 1.5rem;
-    font-family: "avenir";
+    font-family: avenir;
     padding: 10rem 0 0 0;
   }
   .hero__shows-title {
@@ -224,14 +220,11 @@
     line-height: 4.25rem;
   }
   .hero__shows-song-container {
-    height: 26rem;
     display: flex;
+    padding-top: 17rem;
     align-items: flex-end;
-    padding-left: 5rem;
-  }
-  .hero__shows-song {
-    width: 27rem;
-    height: 9rem;
+    width: 35rem;
+    height: 9.125rem;
   }
 }
 /*MOBILE SIZING*/
@@ -292,11 +285,21 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
-.shows__button:focus {
-  outline-width: 0;
+
+.shows__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.shows__button:hover {
-  background-color: black;
+.shows__container .shows__new {
+  padding: 16px;
+}
+.shows__container .shows__new:hover {
+  background-color: #fafafa;
+}
+.shows__container .shows__new.selected-show {
+  background-color: #e1e1e1;
 }
 
 /*TABLET SIZING*/
@@ -316,7 +319,9 @@
   }
   .shows__top {
     display: flex;
+    width: 40rem;
     justify-content: space-between;
+    padding-left: 1rem;
     font-family: "avenir";
     color: #afafaf;
   }
@@ -350,10 +355,12 @@
   .shows__location-actual {
     font-size: 0.875rem;
     line-height: 1.375rem;
+    font-weight: 400;
   }
   .shows__venue-actual {
     font-size: 0.875rem;
     line-height: 1.375rem;
+    font-weight: 400;
   }
   .shows__button {
     width: 10rem;
@@ -366,21 +373,31 @@
 /*DESKTOP SIZING*/
 @media only screen and (min-width: 1280px) {
   .shows {
-    padding: 2.5rem 11.25rem;
+    padding: 2.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
-  .shows__container {
-    width: 50.25rem;
+  .shows__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding: 0 15rem 1.5rem 10rem;
+    align-self: flex-start;
   }
   .shows__new {
     padding: 1rem 0;
   }
   .shows__top {
     padding-bottom: 0.75rem;
+    justify-content: flex-start;
+    padding-left: 1rem;
   }
 }
+.shows__container {
+  padding-top: 1.35rem;
+}
+
 .footer {
   background-color: #323232;
   color: #ffffff;

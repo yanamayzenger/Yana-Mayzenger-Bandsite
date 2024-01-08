@@ -1,32 +1,26 @@
+/* mobile-styling-start */
 .hero__shows {
-  background-image: url("../../assets/images/hero-shows.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $white;
   width: 100vw;
   height: 29.5rem;
-  display: flex;
-  justify-content: left;
-  align-content: center;
-  position: relative;
+  background-image: url("../../assets/images/hero-shows.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &-container {
-    background-color: rgba($color: black, $alpha: 0.5);
-    width: 100vw;
-    height: 29.5rem;
-
+    height: 472px;
+    background-color: rgba($black, 0.5);
     padding: 0 1rem 0 1rem;
   }
   &-subtitle {
-    font-family: "avenir";
+    font-family: avenir;
     color: $white;
     font-size: 0.875rem;
     margin: 0;
     padding: 4rem 0 0 0;
   }
   &-title {
-    font-family: "avenir";
+    font-family: avenir;
     color: $white;
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -34,11 +28,12 @@
     margin: 0;
   }
   &-song-container {
-    width: 38rem;
+    width: 18rem;
     height: 6rem;
   }
 }
 
+/* tablet-styling-start */
 @include tablet {
   .hero__shows {
     width: 100vw;
@@ -50,7 +45,7 @@
     }
     &-subtitle {
       font-size: 1.5rem;
-      font-family: "avenir";
+      font-family: avenir;
       padding: 6rem 0 0 0;
     }
     &-title {
@@ -59,13 +54,15 @@
       font-size: 3.75rem;
       line-height: 4.25rem;
     }
-    &-song {
-      width: 27rem;
-      height: 9rem;
+
+    &-song-container {
+      width: 30rem;
+      height: 6rem;
     }
   }
 }
 
+/* desktop-styling-start */
 @include desktop {
   .hero__shows {
     width: 100vw;
@@ -73,13 +70,12 @@
     &-container {
       width: 100vw;
       height: 41.875rem;
-      padding: 0 11.25rem 0 11.25rem;
       display: flex;
     }
 
     &-subtitle {
       font-size: 1.5rem;
-      font-family: "avenir";
+      font-family: avenir;
       padding: 10rem 0 0 0;
     }
     &-title {
@@ -89,14 +85,11 @@
       line-height: 4.25rem;
     }
     &-song-container {
-      height: 26rem;
       display: flex;
+      padding-top: 17rem;
       align-items: flex-end;
-      padding-left: 5rem;
-    }
-    &-song {
-      width: 27rem;
-      height: 9rem;
+      width: 35rem;
+      height: 9.125rem;
     }
   }
 }
