@@ -64,7 +64,22 @@
       font-size: 0.8125rem;
       line-height: 1.125rem;
       margin: 0 0 1.5rem 0;
+      &__bio-container {
+        display: flex; // Use flexbox
+        flex-wrap: wrap; // Allows items to wrap to next line if needed
+
+        &--one,
+        &--two {
+          flex: 1; // Each child takes up equal space
+          padding: 0 10px; // Add padding for spacing, adjust as needed
+        }
+      }
     }
+  }
+}
+@include mobile {
+  .about__bio__bio-container {
+    flex-direction: column;
   }
 }
 @include tablet {

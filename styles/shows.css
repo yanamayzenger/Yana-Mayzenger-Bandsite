@@ -416,6 +416,8 @@
 }
 .footer__logo {
   display: none;
+  max-width: 120px;
+  max-height: 20px;
 }
 .footer__contact-name {
   font-size: 0.875rem;
@@ -427,8 +429,12 @@
   text-decoration: none;
   margin-bottom: 1.25rem;
 }
+.footer__logo-tablet-desktop {
+  display: none;
+}
 .footer__copyright {
   color: #afafaf;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
 
@@ -442,6 +448,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .footer__logo-mobile {
+    display: none;
+  }
+  .footer__logo-tablet-desktop {
+    display: block;
+    padding-right: 5rem;
+    max-width: 120px;
+    max-height: 20px;
   }
   .footer__title {
     font-size: 2.25rem;
