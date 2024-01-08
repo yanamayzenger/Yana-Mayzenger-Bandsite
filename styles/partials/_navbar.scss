@@ -35,8 +35,12 @@
         display: block;
         padding-bottom: 0.44rem;
         color: $mercury;
-        &:hover {
+
+        &:hover,
+        &.active {
           color: $white;
+          font-weight: bold;
+
           &::before {
             content: "";
             position: absolute;
@@ -47,12 +51,6 @@
           }
         }
       }
-    }
-
-    &-item #active {
-      font-weight: bold;
-      color: $white;
-      border-bottom: 0.4125rem solid $white;
     }
   }
 }

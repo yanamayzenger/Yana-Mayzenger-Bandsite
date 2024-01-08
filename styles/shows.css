@@ -60,21 +60,17 @@
   padding-bottom: 0.44rem;
   color: #e1e1e1;
 }
-.header__nav-menu-item-link:hover {
+.header__nav-menu-item-link:hover, .header__nav-menu-item-link.active {
   color: #ffffff;
+  font-weight: bold;
 }
-.header__nav-menu-item-link:hover::before {
+.header__nav-menu-item-link:hover::before, .header__nav-menu-item-link.active::before {
   content: "";
   position: absolute;
   width: 100%;
   border-bottom: 0.4125rem solid #ffffff;
   bottom: 0;
   left: 0;
-}
-.header__nav-menu-item #active {
-  font-weight: bold;
-  color: #ffffff;
-  border-bottom: 0.4125rem solid #ffffff;
 }
 
 @media only screen and (min-width: 768px) {
