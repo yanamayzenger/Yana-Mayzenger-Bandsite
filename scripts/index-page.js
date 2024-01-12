@@ -1,5 +1,3 @@
-//Default comments array
-
 let comments = [
   {
     name: "Connor Walton",
