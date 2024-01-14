@@ -1,5 +1,7 @@
-function displayShows(arr) {
+const bandSiteApi = new BandSiteApi("cf7bbab3-9fa7-40a2-a428-1207b967000d");
+function displayShows(showsData) {
   const shows = document.querySelector(".shows");
+  shows.innerHTML = "";
   const showsTitle = document.createElement("h2");
   showsTitle.classList.add("shows__title");
   showsTitle.innerText = "Shows";
@@ -22,11 +24,7 @@ function displayShows(arr) {
   locationsTitle.classList.add("shows__top-location");
   locationsTitle.innerText = "LOCATION";
   infoDiv.appendChild(locationsTitle);
-  const hiddenEle = document.createElement("span");
-  hiddenEle.classList.add("shows__hidden");
-  hiddenEle.innerText = ".";
-  infoDiv.appendChild(hiddenEle);
-  for (let key in arr) {
+  showsData.forEach((show) => {
     const showsParent = document.createElement("div");
     showsParent.classList.add("shows__new");
     showsContainer.appendChild(showsParent);
@@ -34,8 +32,7 @@ function displayShows(arr) {
     dateTitle.classList.add("shows__date");
     dateTitle.innerText = "DATE";
     showsParent.appendChild(dateTitle);
-    const dateStr = arr[key]["date"];
-    const date = new Date(dateStr);
+    const date = new Date(show.date);
     const options = { year: "numeric", month: "short", day: "2-digit" };
     const formattedDate = date.toLocaleDateString(undefined, options);
     const dateShow = document.createElement("h3");
@@ -48,7 +45,7 @@ function displayShows(arr) {
     showsParent.appendChild(venueTitle);
     const venueShow = document.createElement("h3");
     venueShow.classList.add("shows__venue-actual");
-    venueShow.innerText = arr[key]["place"];
+    venueShow.innerText = show.place;
     showsParent.appendChild(venueShow);
     const locationTitle = document.createElement("h4");
     locationTitle.classList.add("shows__location");
@@ -56,20 +53,20 @@ function displayShows(arr) {
     showsParent.appendChild(locationTitle);
     const locationShow = document.createElement("h3");
     locationShow.classList.add("shows__location-actual");
-    locationShow.innerText = arr[key]["location"];
+    locationShow.innerText = show.location;
     showsParent.appendChild(locationShow);
     const buyTickets = document.createElement("button");
     buyTickets.classList.add("shows__button");
     buyTickets.innerText = "BUY TICKETS";
     showsParent.appendChild(buyTickets);
+  });
+}
+async function loadAndDisplayShows() {
+  try {
+    const showsData = await bandSiteApi.getShows();
+    displayShows(showsData);
+  } catch (error) {
+    console.error("Error retrieving show data:", error);
   }
 }
-const showDates = axios.get(
-  "https://project-1-api.herokuapp.com/showdates?api_key=cf7bbab3-9fa7-40a2-a428-1207b967000d"
-);
-showDates.then((response) => {
-  displayShows(response.data);
-});
-showDates.catch((error) => {
-  console.log("you did something wrong");
-});
+loadAndDisplayShows();

@@ -16,9 +16,10 @@ class BandSiteApi {
     );
     return response.data.sort((a, b) => b.timestamp - a.timestamp);
   }
+
   async getShows() {
     const response = await axios.get(
-      `${this.baseUrl}/shows?api_key=${this.apiKey}`
+      `${this.baseUrl}/showdates?api_key=${this.apiKey}`
     );
     return response.data;
   }
