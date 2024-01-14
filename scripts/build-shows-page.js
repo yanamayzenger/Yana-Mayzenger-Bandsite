@@ -42,15 +42,24 @@ function displayShows(arr) {
     showsParent.classList.add("shows__new");
     showsContainer.appendChild(showsParent);
 
-    //Date
+    // Date
     const dateTitle = document.createElement("h4");
     dateTitle.classList.add("shows__date");
     dateTitle.innerText = "DATE";
     showsParent.appendChild(dateTitle);
-    //Actual Date
+
+    // Convert the date string to a Date object
+    const dateStr = arr[key]["date"];
+    const date = new Date(dateStr);
+
+    // Format the Date object into a more readable format (e.g., "Jan 01, 2024")
+    const options = { year: "numeric", month: "short", day: "2-digit" };
+    const formattedDate = date.toLocaleDateString(undefined, options);
+
+    // Actual Date
     const dateShow = document.createElement("h3");
     dateShow.classList.add("shows__date-actual");
-    dateShow.innerText = arr[key]["date"];
+    dateShow.innerText = formattedDate;
     showsParent.appendChild(dateShow);
     //Venue
     const venueTitle = document.createElement("h4");
