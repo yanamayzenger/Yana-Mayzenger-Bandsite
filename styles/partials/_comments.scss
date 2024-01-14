@@ -2,13 +2,15 @@
   background-color: $white;
   margin: 0 1rem 0 1rem;
   padding-bottom: 1rem;
+
   &__title {
     font-family: "avenir";
-    font-size: 1.5rem;
+    font-size: 24px;
     margin: 2rem 0 2.5rem;
-    line-height: 2rem;
+    line-height: 32px;
     font-weight: 700;
   }
+
   &__image {
     width: 2.25rem;
     height: 2.25rem;
@@ -17,11 +19,13 @@
     object-fit: cover;
     margin-top: 1.4rem;
   }
+
   &__name-container {
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 0.0625rem solid $mercury;
+    border-bottom: 1px solid $mercury;
   }
+
   &__input-container {
     display: flex;
     flex-direction: column;
@@ -30,44 +34,46 @@
       color: $silver;
       font-size: 0.75rem;
       line-height: 1.25rem;
-      margin: 0.25rem 0;
+      margin: 4px 0;
     }
   }
+
   &__text-container {
     font-family: "avenir";
     font-size: 0.8125rem;
-    border: 0.0625rem solid $mercury;
-    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    border-radius: 4px;
     width: 14rem;
-    padding: 0.75rem;
+    padding: 12px;
     background-color: $alabaster;
     border-color: $silver;
     resize: none;
     &:focus {
-      border: 0.0625rem solid $black;
+      border: 1px solid $black;
       outline-width: 0;
     }
     &--error {
-      border: 0.0625rem solid $error;
+      border: 1px solid $error;
     }
     &--one {
-      padding: 0.75rem;
-      margin: 0 0 0.25rem 0;
-      height: 2.25rem;
+      padding: 12px;
+      margin: 0 0 4px 0;
+      height: 36px;
     }
     &--two {
       padding: 0.625rem 0.625rem 3.125rem 0.625rem;
-      height: 2.25rem;
-      padding: 0.75rem;
-      margin: 0 0 0.25rem 0;
+      height: 36px;
+      padding: 12px;
+      margin: 0 0 4px 0;
     }
   }
+
   &__button {
     font-family: "avenir";
     background-color: $black;
     border-style: none;
     height: 2.5rem;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     color: $white;
     text-align: center;
     width: 14rem;
@@ -78,8 +84,9 @@
       background-color: black;
     }
   }
+
   &__default {
-    border-bottom: 0.0625rem solid $mercury;
+    border-bottom: 1px solid $mercury;
   }
   &__header {
     display: flex;
@@ -112,6 +119,7 @@
       font-weight: 400;
     }
   }
+
   &__text-container-default {
     display: flex;
     &--comment {
@@ -134,10 +142,11 @@
 
     &__title {
       font-family: "avenir";
-      font-size: 2.25rem;
-      line-height: 2.75rem;
+      font-size: 36px;
+      line-height: 44px;
       font-weight: 700;
       margin: 3rem 0 3.5rem;
+      padding-left: 10rem;
     }
 
     &__image {
@@ -160,7 +169,7 @@
 
     &__border {
       width: 33rem;
-      border: 0.0625rem solid $mercury;
+      border: 1px solid $mercury;
     }
 
     &__input-container {
@@ -171,46 +180,48 @@
         color: $silver;
         font-size: 0.75rem;
         line-height: 1.25rem;
-        margin: 0.25rem 0;
+        margin: 4px 0;
       }
     }
+
     &__text-container {
       font-family: "avenir";
       font-size: 1rem;
-      border: 0.0625rem solid $mercury;
-      padding: 1rem;
-      border-radius: 0.25rem;
+      border: 1px solid $mercury;
+      padding: 16px;
+      border-radius: 4px;
       width: 28.75rem;
       background-color: $alabaster;
       border-color: $silver;
       resize: none;
-      height: 3rem;
+      height: 48px;
       &:focus {
-        border: 0.0625rem solid $black;
+        border: 1px solid $black;
         outline-width: 0;
       }
       &--error {
-        border: 0.0625rem solid $error;
+        border: 1px solid $error;
       }
       &--one {
         padding: 0.625rem 1rem 0 1rem;
-        margin: 0 0 0.25rem 0;
-        height: 3rem;
+        margin: 0 0 4px 0;
+        height: 48px;
       }
       &--two {
         padding: 0.625rem 1rem 0 1rem;
         margin: 0 0 1.5rem 0;
-        height: 3rem;
-        padding: 1rem;
+        height: 48px;
+        padding: 16px;
       }
     }
+
     &__button {
       font-family: "avenir";
       font-size: 1rem;
       background-color: $black;
       border-style: none;
       height: 3rem;
-      border-radius: 0.25rem;
+      border-radius: 4px;
       color: $white;
       text-align: center;
       width: 10rem;
@@ -222,14 +233,17 @@
         background-color: black;
       }
     }
+
     &__default-comment {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     &__default {
-      width: 33rem;
+      width: 528px;
     }
+
     &__header {
       position: relative;
       display: flex;
@@ -264,7 +278,7 @@
     &__text-container-default {
       display: flex;
       justify-content: flex-end;
-      border-bottom: 0.0625rem solid $mercury;
+      border-bottom: 1px solid $mercury;
       &--comment {
         color: $black;
         width: 29rem;
@@ -276,26 +290,31 @@
     }
   }
 }
+
 @include desktop {
   .comment {
     background-color: $white;
     margin: 0 11.25rem 0 11.25rem;
+
     &__title {
       font-family: "avenir";
       font-size: 2.25rem;
       margin: 3rem 0 3.5rem;
-      padding-left: 3rem;
+      padding-left: 10rem;
     }
+
     &__image {
       width: 3rem;
       height: 3rem;
       border-radius: 2rem;
       margin: 1.4rem 1.25rem 0 0;
     }
+
     &__name-container {
       display: flex;
       justify-content: center;
     }
+
     &__input-container {
       display: flex;
       flex-direction: column;
@@ -307,41 +326,43 @@
         margin: 0 0 0.5rem 0;
       }
     }
+
     &__text-container {
       font-family: "avenir";
       font-size: 0.8125rem;
-      border: 0.0625rem solid $mercury;
-      border-radius: 0.25rem;
-      padding: 1rem;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      padding: 16px;
       width: 28.75rem;
       background-color: $alabaster;
       border-color: $silver;
       resize: none;
       &:focus {
-        border: 0.0625rem solid $black;
+        border: 1px solid $black;
         outline-width: 0;
       }
       &--error {
-        border: 0.0625rem solid $error;
+        border: 1px solid $error;
       }
       &--one {
         padding: 0.625rem 1rem 0 1rem;
-        margin: 0 0 0.25rem 0;
-        height: 3rem;
+        margin: 0 0 4px 0;
+        height: 48px;
       }
       &--two {
         padding: 0.625rem 1rem 0 1rem;
-        margin: 0 0 0.25rem 0;
-        height: 3rem;
+        margin: 0 0 4px 0;
+        height: 48px;
       }
     }
+
     &__button {
       font-family: "avenir";
       font-size: 1rem;
       background-color: $black;
       border-style: none;
       height: 3rem;
-      border-radius: 0.25rem;
+      border-radius: 4px;
       color: $white;
       text-align: center;
       width: 10rem;

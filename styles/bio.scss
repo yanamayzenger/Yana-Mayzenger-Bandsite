@@ -13,6 +13,7 @@ body {
 @import "./Partials/mixins";
 @import "./Partials/breakpoints";
 @import "./Partials/colors";
+@import "./partials/comments";
 
 .header__nav {
   font-family: "avenir";
@@ -51,11 +52,11 @@ body {
         display: block;
         padding-bottom: 0.44rem;
         color: $mercury;
-
         &:hover,
         &.active {
           color: $white;
           font-weight: bold;
+          border-bottom: 0.4125rem solid $white;
           &::before {
             content: "";
             position: absolute;
