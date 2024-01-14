@@ -141,7 +141,7 @@
           />
         </div>
       </section>
-      <h2 class="comment__title">Join the Conversation</h2>
+      <!-- <h2 class="comment__title">Join the Conversation</h2>
       <div class="comment__name-container">
         <img
           class="comment__image"
@@ -168,7 +168,37 @@
           <button class="comment__button">COMMENT</button>
         </form>
       </div>
-      <div class="comment__default-comment"></div>
+      <div class="comment__default-comment"></div> -->
+
+      <section class="comments">
+        <h1 class="comments__title">Join the Conversation</h1>
+        <div class="comments__input">
+          <!-- <img class="comments__input-photo" src="./assets/Images/Mohan-muruge.jpg" alt="User photo"> -->
+          <div class="comments__input-photo"></div>
+          <div class="comments__input-info">
+            <form class="comments__input-form">
+              <p>NAME</p>
+              <textarea
+                class="comments__input-info-name"
+                name="name"
+                rows="10"
+                cols="50"
+                placeholder="Enter your name"
+              ></textarea>
+              <p>COMMENT</p>
+              <textarea
+                class="comments__input-info-comment"
+                name="comment"
+                rows="10"
+                cols="50"
+                placeholder="Add a new comment"
+              ></textarea>
+              <button class="comments__input-submit">COMMENT</button>
+            </form>
+          </div>
+        </div>
+        <div class="comments__section"></div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__main">
@@ -246,6 +276,8 @@
         Copyright The Bees Knees © 2021 All Rights Reserved
       </h4>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/index-page.js"></script>
+    <script src="./scripts/band-site-api.js"></script>
   </body>
 </html>

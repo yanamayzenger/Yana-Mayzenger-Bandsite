@@ -13,7 +13,7 @@ body {
 @import "./Partials/mixins";
 @import "./Partials/breakpoints";
 @import "./Partials/colors";
-@import "../styles/partials/comments";
+
 .header__nav {
   font-family: "avenir";
   display: flex;
@@ -430,6 +430,8 @@ body {
   }
 }
 //comment section goes here
+
+//end of comments
 .footer {
   background-color: $black;
   color: $white;

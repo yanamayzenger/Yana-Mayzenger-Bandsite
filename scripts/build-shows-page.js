@@ -1,39 +1,8 @@
-const arrDates = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Pres Club",
-    location: "San Francisco, CA",
-  },
-];
-
+//shows:
+//CREATING A FUNCTION USING DOM TO POST ALL THE DATA FROM HEROKU SHOWS DATABASE
 function displayShows(arr) {
   const shows = document.querySelector(".shows");
-
+  //CREATING ELEMENTS USING DOM
   const showsTitle = document.createElement("h2");
   showsTitle.classList.add("shows__title");
   showsTitle.innerText = "Shows";
@@ -62,53 +31,62 @@ function displayShows(arr) {
   locationsTitle.innerText = "LOCATION";
   infoDiv.appendChild(locationsTitle);
 
-  arr.forEach((show) => {
+  const hiddenEle = document.createElement("span");
+  hiddenEle.classList.add("shows__hidden");
+  hiddenEle.innerText = ".";
+  infoDiv.appendChild(hiddenEle);
+
+  for (let key in arr) {
+    //container div
     const showsParent = document.createElement("div");
     showsParent.classList.add("shows__new");
     showsContainer.appendChild(showsParent);
 
+    //Date
     const dateTitle = document.createElement("h4");
     dateTitle.classList.add("shows__date");
     dateTitle.innerText = "DATE";
     showsParent.appendChild(dateTitle);
-
+    //Actual Date
     const dateShow = document.createElement("h3");
     dateShow.classList.add("shows__date-actual");
-    dateShow.innerText = show.date;
+    dateShow.innerText = arr[key]["date"];
     showsParent.appendChild(dateShow);
-
+    //Venue
     const venueTitle = document.createElement("h4");
     venueTitle.classList.add("shows__venue");
     venueTitle.innerText = "VENUE";
     showsParent.appendChild(venueTitle);
-
+    //Actual Venue
     const venueShow = document.createElement("h3");
     venueShow.classList.add("shows__venue-actual");
-    venueShow.innerText = show.venue;
+    venueShow.innerText = arr[key]["place"];
     showsParent.appendChild(venueShow);
-
+    //Location
     const locationTitle = document.createElement("h4");
     locationTitle.classList.add("shows__location");
     locationTitle.innerText = "LOCATION";
     showsParent.appendChild(locationTitle);
-
+    //Actual Location
     const locationShow = document.createElement("h3");
     locationShow.classList.add("shows__location-actual");
-    locationShow.innerText = show.location;
+    locationShow.innerText = arr[key]["location"];
     showsParent.appendChild(locationShow);
-
+    //Button
     const buyTickets = document.createElement("button");
     buyTickets.classList.add("shows__button");
     buyTickets.innerText = "BUY TICKETS";
     showsParent.appendChild(buyTickets);
-
-    showsParent.addEventListener("click", function () {
-      document
-        .querySelectorAll(".shows__new")
-        .forEach((item) => item.classList.remove("selected-show"));
-      showsParent.classList.add("selected-show");
-    });
-  });
+  }
 }
-
-displayShows(arrDates);
+//GETTING THE SHOW DATA TO POST ON SITE USING DOM
+const showDates = axios.get(
+  "https://project-1-api.herokuapp.com/showdates?api_key=cf7bbab3-9fa7-40a2-a428-1207b967000d"
+);
+showDates.then((response) => {
+  //CALLING THE FUNCTION TO CREATE THE DOM ELEMENTS AND FILL IT WITH THE DATA FROM THE DATA BASE
+  displayShows(response.data);
+});
+showDates.catch((error) => {
+  console.log("you did something wrong");
+});
