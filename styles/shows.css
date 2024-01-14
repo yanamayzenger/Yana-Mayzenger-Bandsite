@@ -16,175 +16,6 @@
   font-style: normal;
   font-weight: 700;
 }
-.shows {
-  padding: 2rem 1rem;
-}
-.shows__top {
-  display: none;
-}
-.shows__title {
-  color: #323232;
-  padding-bottom: 1rem;
-  font-family: "avenir";
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-.shows__new {
-  padding: 1.5rem 0 1rem 0;
-  border-bottom: 1px solid #e1e1e1;
-  display: flex;
-  flex-direction: column;
-}
-.shows__date, .shows__venue, .shows__location {
-  color: #afafaf;
-  padding-bottom: 1rem;
-  font-family: "avenir";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-}
-.shows__date-actual, .shows__venue-actual, .shows__location-actual {
-  padding-bottom: 1.5rem;
-  color: #323232;
-}
-.shows__date-actual {
-  font-family: "avenir";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-.shows__venue-actual {
-  font-family: "avenir";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-}
-.shows__location-actual {
-  font-family: "avenir";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  padding-bottom: 2rem;
-}
-.shows__button {
-  background-color: #323232;
-  color: #ffffff;
-  font-family: "avenir";
-  width: 18.5rem;
-  height: 3rem;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-
-.shows__container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.shows__container .shows__new {
-  padding: 16px;
-}
-.shows__container .shows__new:hover {
-  background-color: #fafafa;
-}
-.shows__container .shows__new.selected-show {
-  background-color: #e1e1e1;
-}
-
-/*TABLET SIZING*/
-@media only screen and (min-width: 768px) {
-  .shows {
-    padding: 2rem 1.5rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .shows__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding-bottom: 1.5rem;
-  }
-  .shows__top {
-    display: flex;
-    width: 40rem;
-    justify-content: space-between;
-    padding-left: 1rem;
-    font-family: "avenir";
-    color: #afafaf;
-  }
-  .shows__top-venue, .shows__top-date, .shows__top-location {
-    width: 8.375rem;
-    font-size: 0.75rem;
-  }
-  .shows__top-venue {
-    padding-left: 2rem;
-  }
-  .shows__hidden {
-    visibility: hidden;
-    width: 10rem;
-  }
-  .shows__new {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .shows__date, .shows__venue, .shows__location {
-    display: none;
-  }
-  .shows__date-actual, .shows__venue-actual, .shows__location-actual {
-    padding-bottom: 0;
-    width: 8.375rem;
-  }
-  .shows__date-actual {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-  .shows__location-actual {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-  }
-  .shows__venue-actual {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-  }
-  .shows__button {
-    width: 10rem;
-    height: 3rem;
-  }
-  .shows__venue-actual {
-    padding-left: 2rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .shows {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .shows__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding: 0 15rem 1.5rem 10rem;
-    align-self: flex-start;
-  }
-  .shows__new {
-    padding: 1rem 0;
-  }
-  .shows__top {
-    padding-bottom: 0.75rem;
-    justify-content: flex-start;
-    padding-left: 1rem;
-  }
-}
-.shows__container {
-  padding-top: 1.35rem;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -311,7 +142,6 @@ body {
     border-bottom: 0.4125rem solid transparent;
   }
 }
-/* mobile-styling-start */
 .hero__shows {
   width: 100vw;
   height: 29.5rem;
@@ -400,6 +230,174 @@ body {
     height: 9.125rem;
   }
 }
+.shows {
+  padding: 2rem 1rem;
+}
+.shows__top {
+  display: none;
+}
+.shows__title {
+  color: #323232;
+  padding-bottom: 1rem;
+  font-family: "avenir";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.shows__new {
+  padding: 1.5rem 0 1rem 0;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  flex-direction: column;
+}
+.shows__date, .shows__venue, .shows__location {
+  color: #afafaf;
+  padding-bottom: 1rem;
+  font-family: "avenir";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.shows__date-actual, .shows__venue-actual, .shows__location-actual {
+  padding-bottom: 1.5rem;
+  color: #323232;
+}
+.shows__date-actual {
+  font-family: "avenir";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.shows__venue-actual {
+  font-family: "avenir";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.shows__location-actual {
+  font-family: "avenir";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding-bottom: 2rem;
+}
+.shows__button {
+  background-color: #323232;
+  color: #ffffff;
+  font-family: "avenir";
+  width: 18.5rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.shows__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.shows__container .shows__new {
+  padding: 16px;
+}
+.shows__container .shows__new:hover {
+  background-color: #fafafa;
+}
+.shows__container .shows__new.selected-show {
+  background-color: #e1e1e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .shows {
+    padding: 2rem 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .shows__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+  }
+  .shows__top {
+    display: flex;
+    width: 40rem;
+    justify-content: space-between;
+    padding-left: 1rem;
+    font-family: "avenir";
+    color: #afafaf;
+  }
+  .shows__top-venue, .shows__top-date, .shows__top-location {
+    width: 8.375rem;
+    font-size: 0.75rem;
+  }
+  .shows__top-venue {
+    padding-left: 2rem;
+  }
+  .shows__hidden {
+    visibility: hidden;
+    width: 10rem;
+  }
+  .shows__new {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shows__date, .shows__venue, .shows__location {
+    display: none;
+  }
+  .shows__date-actual, .shows__venue-actual, .shows__location-actual {
+    padding-bottom: 0;
+    width: 8.375rem;
+  }
+  .shows__date-actual {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .shows__location-actual {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  .shows__venue-actual {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  .shows__button {
+    width: 10rem;
+    height: 3rem;
+  }
+  .shows__venue-actual {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .shows {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .shows__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding: 0 15rem 1.5rem 10rem;
+    align-self: flex-start;
+  }
+  .shows__new {
+    padding: 1rem 0;
+  }
+  .shows__top {
+    padding-bottom: 0.75rem;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+}
+.shows__container {
+  padding-top: 1.35rem;
+}
+
 .footer {
   background-color: #323232;
   color: #ffffff;
