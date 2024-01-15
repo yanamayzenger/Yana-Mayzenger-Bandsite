@@ -426,14 +426,12 @@ body {
   &__logo-tablet-desktop {
     display: none;
   }
-
   &__copyright {
     color: $silver;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
 }
-
 @include tablet {
   .footer {
     padding: 0 1.5rem;

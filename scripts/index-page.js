@@ -28,7 +28,6 @@ function displayComments(arr) {
     mainP.innerText = comment.comment;
     mainP.classList.add("comment__text-container-default--comment");
     mainDiv.appendChild(mainP);
-
     commentDiv.appendChild(mainDiv);
   });
 }
