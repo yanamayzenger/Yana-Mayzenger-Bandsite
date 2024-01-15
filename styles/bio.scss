@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
 }
-
 html,
 body {
   box-sizing: border-box;
@@ -11,14 +10,901 @@ body {
   padding: 0;
   font-family: "avenir";
 }
-
 @import "./Partials/mixins";
 @import "./Partials/breakpoints";
 @import "./Partials/colors";
-@import "./Partials/navbar";
-@import "./Partials/hero";
-@import "./Partials/about";
-@import "./Partials/gallery.scss";
-@import "../styles/partials/gallery";
-@import "../styles/partials/comments";
-@import "./Partials/footer";
+.header__nav {
+  font-family: "avenir";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: $black;
+  color: $silver;
+  &-logo-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  &-image {
+    width: 7.5rem;
+    margin-bottom: 0.5rem;
+    max-width: 7.5rem;
+    max-height: 1.25rem;
+  }
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 0.5rem;
+    width: 100%;
+    &-item {
+      width: 50vw;
+      text-align: center;
+      position: relative;
+      &-link {
+        text-decoration: none;
+        display: block;
+        padding-bottom: 0.44rem;
+        color: $mercury;
+        &:hover,
+        &.active {
+          color: $white;
+          font-weight: bold;
+          border-bottom: 0.4125rem solid $white;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            border-bottom: 0.4125rem solid $white;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .header__nav {
+    flex-direction: row;
+    &-logo-container {
+      margin-top: 0;
+    }
+    &-image {
+      width: 7.5rem;
+      margin-bottom: 0rem;
+      margin-left: 1.5rem;
+    }
+    &-menu {
+      justify-content: left;
+      align-items: center;
+      margin-top: 0;
+      height: 5rem;
+      &-item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 5rem;
+        height: 5rem;
+        margin-left: 3.5rem;
+        border-bottom: unset;
+
+        &-link {
+          display: block;
+          width: 5rem;
+          margin-top: 0.7125rem;
+          padding-bottom: 1.4rem;
+          padding-top: 1.5rem;
+          border-bottom: 0.4125rem solid transparent;
+        }
+      }
+    }
+  }
+}
+@include desktop {
+  .header__nav {
+    &-logo-container {
+      margin-top: 0;
+    }
+    &-image {
+      width: 7.5rem;
+      margin-bottom: 0rem;
+      margin-left: 11.25rem;
+      margin-right: 1.75rem;
+    }
+    &-menu {
+      justify-content: left;
+      margin-top: 0;
+      &-item {
+        margin-left: 1.75rem;
+        margin-right: 1.75rem;
+        border-bottom: unset;
+        &-link {
+          border-bottom: 0.4125rem solid transparent;
+        }
+      }
+    }
+  }
+}
+.hero {
+  height: 11.4375rem;
+  width: 100%;
+  background-image: url(../../assets/images/hero-bio.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  position: relative;
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  &__title {
+    position: absolute;
+    font-family: "avenir";
+    color: $white;
+    font-size: 1.5rem;
+    width: 13rem;
+    line-height: 2rem;
+    padding: 4rem 0 0 3rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  @include tablet {
+    height: 25rem;
+
+    &__title {
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      width: 32rem;
+      padding: 8rem 0 0 5rem;
+    }
+  }
+  @include desktop {
+    height: 40rem;
+
+    &__title {
+      padding: 15rem 0 0 7rem;
+    }
+  }
+}
+.about {
+  margin: 0 1rem;
+  color: $black;
+  background-color: $white;
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-title {
+      font-family: "avenir";
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 2rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    &-image {
+      height: 100%;
+      width: 100%;
+      margin: 1.5rem 0;
+      object-fit: cover;
+    }
+    &-quote {
+      font-family: "avenir";
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      padding-bottom: 1rem;
+      font-weight: 600;
+      &-person {
+        padding-bottom: 2rem;
+        font-family: "avenir";
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+      }
+    }
+  }
+  &__bio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    &-name {
+      font-family: "avenir";
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      margin: 0 0 1.5rem 0;
+    }
+    &-container--one {
+      font-family: "avenir";
+      font-weight: 400;
+      font-size: 0.8125rem;
+      line-height: 1.125rem;
+      margin: 0 0 1rem 0;
+    }
+    &-container--two {
+      font-family: "avenir";
+      font-weight: 400;
+      font-size: 0.8125rem;
+      line-height: 1.125rem;
+      margin: 0 0 1.5rem 0;
+      &__bio-container {
+        display: flex;
+        flex-wrap: wrap;
+        &--one,
+        &--two {
+          flex: 1;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .about__bio__bio-container {
+    flex-direction: column;
+  }
+}
+@include tablet {
+  .about {
+    margin: 0 1rem;
+    &__intro {
+      &-title {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        margin: 1.5rem 10rem 1rem 5rem;
+      }
+      &-image {
+        height: 45.3125vw;
+        width: fit-content;
+        margin: 2.25rem 10rem 2.25rem 10rem;
+        object-fit: cover;
+      }
+      &-quote {
+        font-family: "avenir";
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 2.25rem 7rem 2.25rem 10rem;
+        width: fit-content;
+        &-person {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin: 0 7rem 0 10rem;
+        }
+      }
+    }
+    &__bio {
+      &-name {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0 7rem 2.25rem 10rem;
+      }
+      &-container--one {
+        width: 20rem;
+        margin: 0 2.25rem 1rem 10rem;
+        display: flex;
+        float: left;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+      &-container--two {
+        float: right;
+        width: 20rem;
+        margin: 0 2.25rem 1rem 1rem;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+    }
+  }
+}
+@include desktop {
+  .about {
+    margin: 0 1rem;
+    &__intro {
+      &-title {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        margin: 1.5rem 10rem 1rem 5rem;
+      }
+      &-image {
+        height: 45vw;
+        margin-left: 13rem;
+      }
+      &-quote {
+        font-family: "avenir";
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 2.25rem 21rem 1rem 13rem;
+        &-person {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin: 0 21rem 0 13rem;
+        }
+      }
+    }
+    &__bio {
+      &-name {
+        margin: 0 7rem 2.25rem 13rem;
+      }
+      &-container--one {
+        width: 30rem;
+        float: left;
+        margin: 0 1rem 1rem 13rem;
+      }
+      &-container--two {
+        width: 30rem;
+        float: right;
+        margin: 0 0 1rem 1rem;
+      }
+    }
+  }
+}
+.gallery {
+  background-color: $alabaster;
+  padding: 1.5rem 1rem 1rem;
+  color: $black;
+
+  &__title {
+    font-family: "avenir";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+  }
+  &__images {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    &-item {
+      height: 50.625vw;
+      width: 100%;
+      padding: 0.5rem 0;
+      filter: grayscale(1);
+      &:hover {
+        filter: none;
+      }
+    }
+  }
+  @include tablet {
+    padding: 3rem 2.25rem 2.25rem;
+    &__title {
+      font-family: "avenir";
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+    }
+    &__images {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      &-item {
+        height: 16.40625vw;
+        width: calc(33% - 0.75rem);
+        padding: 0 0 1.5rem 0;
+      }
+    }
+  }
+  @include desktop {
+    padding: 3rem 2.25rem 2.25rem;
+    &__title {
+      font-family: "avenir";
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+    }
+    &__images {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      &-item {
+        height: 16.40625vw;
+        width: calc(33% - 0.75rem);
+        padding: 0 0 1.5rem 0;
+      }
+    }
+  }
+}
+.comment {
+  background-color: $white;
+  margin: 0 1rem 0 1rem;
+  padding-bottom: 1rem;
+  &__title {
+    font-family: "avenir";
+    font-size: 1.5rem;
+    margin: 2rem 0 2.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-left: 10rem;
+  }
+  &__image {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: $mercury;
+    object-fit: cover;
+    margin-top: 1.4rem;
+  }
+  &__name-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.0625rem solid $mercury;
+  }
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    &--text {
+      font-family: "avenir";
+      color: $silver;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      margin: 0.25rem 0;
+      padding-top: 0.5rem;
+    }
+  }
+  &__text-container {
+    font-family: "avenir";
+    font-size: 0.8125rem;
+    border: 1px solid $mercury;
+    border-radius: 0.25rem;
+    width: 14rem;
+    padding: 0.75rem;
+    background-color: $alabaster;
+    border-color: $silver;
+    resize: none;
+    padding-bottom: 2rem;
+    &:focus {
+      border: 0.0625rem solid $black;
+      outline-width: 0;
+    }
+    &--error {
+      border: 0.0625rem solid $error;
+    }
+    &--one {
+      padding: 0.75rem;
+      margin: 0 0 4px 0;
+      height: 2.25rem;
+    }
+    &--two {
+      padding: 0.625rem 0.625rem 3.125rem 0.625rem;
+      height: 2.25rem;
+      padding: 0.75rem;
+      margin: 0 0 0.25rem 0;
+    }
+  }
+  &__button {
+    font-family: "avenir";
+    background-color: $black;
+    border-style: none;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    color: $white;
+    text-align: center;
+    width: 14rem;
+    margin: 1rem 0 2rem 0;
+    outline-width: 0;
+    padding: 1.5rem;
+    &:hover {
+      background-color: black;
+    }
+  }
+  &__default {
+    border-bottom: 0.0625rem solid $mercury;
+    padding-bottom: 1rem;
+    width: 80%;
+    margin: 0 0 0 9rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    &--image-one {
+      height: 3rem;
+      width: 3rem;
+      background-color: $mercury;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      float: none;
+      margin-right: 3rem;
+      border-radius: 2rem;
+      margin-top: 1.5rem;
+    }
+    &--name {
+      align-items: flex-start;
+      color: $black;
+      font-family: "avenir";
+      font-size: 0.8125rem;
+      padding: 1.75rem 0 0 1rem;
+      margin: 0;
+      font-weight: 600;
+    }
+    &--date {
+      color: $silver;
+      font-family: "avenir";
+      font-size: 0.8125rem;
+      margin: 0;
+      padding: 1.75rem 0 0 0;
+      font-weight: 400;
+    }
+  }
+  &__text-container-default {
+    display: flex;
+    &--comment {
+      word-wrap: break-word;
+      width: 96%;
+      color: $black;
+      font-size: 0.8125rem;
+      font-family: "avenir";
+      margin: 0;
+      padding: 1rem 0 1.5rem 1rem;
+    }
+  }
+}
+@include tablet {
+  .comment {
+    background-color: $white;
+    margin: 0 1.5rem 0 1.5rem;
+    padding-bottom: 2.25rem;
+    &__title {
+      font-family: "avenir";
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+      margin: 3rem 0 3.5rem;
+      padding-left: 10rem;
+    }
+    &__image {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 2rem;
+      margin: 1.4rem 1.25rem 0 0;
+      float: none;
+    }
+    &__name-container {
+      display: flex;
+      justify-content: center;
+      border: none;
+    }
+    &__border-container {
+      display: flex;
+      justify-content: center;
+    }
+    &__border {
+      width: 33rem;
+      border: 0.0625rem solid $mercury;
+    }
+    &__input-container {
+      display: flex;
+      flex-direction: column;
+      &--text {
+        font-family: "avenir";
+        color: $silver;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        margin: 0.25rem 0;
+      }
+    }
+    &__text-container {
+      font-family: "avenir";
+      font-size: 1rem;
+      border: 1px solid $mercury;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      width: 28.75rem;
+      background-color: $alabaster;
+      border-color: $silver;
+      resize: none;
+      height: 3rem;
+      &:focus {
+        border: 0.0625rem solid $black;
+        outline-width: 0;
+      }
+      &--error {
+        border: 0.0625rem solid $error;
+      }
+      &--one {
+        padding: 0.625rem 1rem 0 1rem;
+        margin: 0 0 0.25rem 0;
+        height: 3rem;
+      }
+      &--two {
+        padding: 0.625rem 1rem 0 1rem;
+        margin: 0 0 1.5rem 0;
+        height: 3rem;
+        padding: 1rem;
+      }
+    }
+    &__button {
+      font-family: "avenir";
+      font-size: 1rem;
+      background-color: $black;
+      border-style: none;
+      height: 3rem;
+      border-radius: 0.25rem;
+      color: $white;
+      text-align: center;
+      width: 10rem;
+      margin: 0 0 1.5rem 0;
+      outline-width: 0;
+      padding: 0;
+      align-self: flex-end;
+      &:hover {
+        background-color: black;
+      }
+    }
+    &__default-comment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 5rem 0 5rem;
+    }
+    &__default {
+      width: 33rem;
+    }
+    &__header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      &--image-one {
+        position: absolute;
+        height: 3rem;
+        width: 3rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 2rem;
+        margin-top: 1.5rem;
+      }
+      &--name {
+        color: $black;
+        font-family: "avenir";
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1.75rem 0 0 3.9375rem;
+        margin: 0;
+      }
+      &--date {
+        color: $silver;
+        font-family: "avenir";
+        font-size: 1rem;
+        margin: 0;
+        padding: 1.75rem 0 0 0;
+      }
+    }
+    &__text-container-default {
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 0.0625rem solid $mercury;
+      &--comment {
+        color: $black;
+        width: 29rem;
+        font-size: 0.875rem;
+        font-family: "avenir";
+        margin: 0;
+        padding: 3rem 0 1.5rem 4rem;
+      }
+    }
+  }
+}
+@include desktop {
+  .comment {
+    background-color: $white;
+    margin: 0 11.25rem 0 11.25rem;
+    &__title {
+      font-family: "avenir";
+      font-size: 2.25rem;
+      margin: 3rem 0 3.5rem;
+      padding-left: 10rem;
+    }
+    &__image {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 2rem;
+      margin: 1.4rem 1.25rem 0 0;
+    }
+    &__name-container {
+      display: flex;
+      justify-content: center;
+    }
+    &__input-container {
+      display: flex;
+      flex-direction: column;
+      &--text {
+        font-family: "avenir";
+        color: $silver;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        margin: 0 0 0.5rem 0;
+      }
+    }
+    &__text-container {
+      font-family: "avenir";
+      font-size: 0.8125rem;
+      border: 1px solid $mercury;
+      border-radius: 0.25rem;
+      padding: 1rem;
+      width: 28.75rem;
+      background-color: $alabaster;
+      border-color: $silver;
+      resize: none;
+      &:focus {
+        border: 0.0625rem solid $black;
+        outline-width: 0;
+      }
+      &--error {
+        border: 0.0625rem solid $error;
+      }
+      &--one {
+        padding: 0.625rem 1rem 0 1rem;
+        margin: 0 0 0.25rem 0;
+        height: 3rem;
+      }
+      &--two {
+        padding: 0.625rem 1rem 0 1rem;
+        margin: 0 0 0.25rem 0;
+        height: 3rem;
+      }
+    }
+    &__button {
+      font-family: "avenir";
+      font-size: 1rem;
+      background-color: $black;
+      border-style: none;
+      height: 3rem;
+      border-radius: 0.25rem;
+      color: $white;
+      text-align: center;
+      width: 10rem;
+      margin: 1rem 0 1.5rem 0;
+      outline-width: 0;
+      padding: 1rem;
+      align-self: flex-end;
+      &:hover {
+        background-color: black;
+      }
+    }
+    &__default-comment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 5rem 0 1rem;
+    }
+  }
+}
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 0 1rem;
+  font-family: "avenir";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  &__title {
+    font-family: "avenir";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 2rem 0 1.5rem 0;
+  }
+  &__social {
+    padding-bottom: 2rem;
+    &-link {
+      margin-right: 1.6rem;
+    }
+  }
+  &__logo {
+    display: none;
+    max-width: 7.5rem;
+    max-height: 1.25rem;
+  }
+  &__contact {
+    &-name {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      padding-bottom: 1.25rem;
+    }
+    &-location,
+    &-link {
+      color: $silver;
+      text-decoration: none;
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__logo-tablet-desktop {
+    display: none;
+  }
+  &__copyright {
+    color: $silver;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+@include tablet {
+  .footer {
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo-mobile {
+      display: none;
+    }
+    &__logo-tablet-desktop {
+      display: block;
+      padding-right: 5rem;
+      max-width: 7.5rem;
+      max-height: 1.25rem;
+    }
+    &__title {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding: 3rem 0 3.5rem 0;
+    }
+    &__social {
+      padding: 0 8rem 0 0;
+      &-link {
+        margin-right: 2rem;
+      }
+    }
+    &__logo {
+      display: inherit;
+      max-width: 7.5rem;
+      max-height: 1.25rem;
+    }
+    &__contact {
+      padding-right: 1.875rem;
+      &-name {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      &-container {
+        display: flex;
+        justify-content: left;
+      }
+      &-location {
+        padding-bottom: 0.25rem;
+      }
+      &-link {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    padding: 0 11rem;
+    &__social {
+      padding-right: 30rem;
+    }
+    &__contact {
+      padding-right: 3.25rem;
+    }
+  }
+}

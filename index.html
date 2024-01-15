@@ -7,10 +7,9 @@
     <title>Bandsite</title>
   </head>
   <body>
-    <!-- navbar-section -->
     <header class="header">
       <nav class="header__nav">
-        <a href="index.html" class="header__nav-logo-container">
+        <a href="./index.html" class="header__nav-logo-container">
           <img
             class="header__nav-image"
             src="./assets/logo/Logo-bandsite.svg"
@@ -19,18 +18,12 @@
         </a>
         <ul class="header__nav-menu">
           <li class="header__nav-menu-item">
-            <a
-              class="header__nav-menu-item-link"
-              id="active"
-              href="./index.html"
+            <a class="header__nav-menu-item-link active" href="./index.html"
               >Biography</a
             >
           </li>
           <li class="header__nav-menu-item">
-            <a
-              class="header__nav-menu-item-link"
-              id="active"
-              href="./pages/shows.html"
+            <a class="header__nav-menu-item-link" href="./pages/shows.html"
               >Shows</a
             >
           </li>
@@ -38,16 +31,14 @@
       </nav>
     </header>
     <main>
-      <!-- hero-section -->
       <section class="hero">
         <div class="hero__opacity">
           <div><h1 class="hero__title">The Bees Knees</h1></div>
         </div>
       </section>
-      <!-- about-section -->
       <article class="about">
         <section class="about__intro">
-          <h1 class="about__intro-title">About The Musicians</h1>
+          <h2 class="about__intro-title">About The Musicians</h2>
           <img
             class="about__intro-image"
             src="./Assets/Images/band.jpg"
@@ -94,72 +85,66 @@
           </div>
         </section>
       </article>
-      <!-- gallery-section -->
       <section class="gallery">
         <h2 class="gallery__title">Photo Gallery</h2>
         <div class="gallery__images">
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-1.jpg"
-            alt="Concert picture 1"
+            alt="Concert picture 1- people"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-2.jpg"
-            alt="Concert picture 2"
+            alt="Concert picture 2-girl vibing"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-3.jpg"
-            alt="Concert picture 3"
+            alt="Concert picture 3-hands in the air"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-4.jpg"
-            alt="Concert picture 4"
+            alt="Concert picture 4- girl with the hand"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-5.jpg"
-            alt="Concert picture 5"
+            alt="Concert picture 5-fire show"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-6.jpg"
-            alt="Concert picture 6"
+            alt="Concert picture 6- the vocalist"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-7.jpg"
-            alt="Concert picture 7"
+            alt="Concert picture 7-stage view"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-8.jpg"
-            alt="Concert picture 8"
+            alt="Concert picture 8- dj djing"
           />
           <img
             class="gallery__images-item"
             src="./assets/images/Photo-gallery-9.jpg"
-            alt="Concert picture 9"
+            alt="Concert picture 9-pure vibes"
           />
         </div>
       </section>
-      <!-- comment-content-start -->
 
-      class="comment">
       <h2 class="comment__title">Join the Conversation</h2>
-
       <div class="comment__name-container">
         <img
           class="comment__image"
           src="./assets/images/Mohan-muruge.jpg"
           alt=""
         />
-
         <form class="comment__input-container">
           <h5 class="comment__input-container--text">NAME</h5>
-
           <textarea
             class="comment__text-container comment__text-container--one"
             name="name"
@@ -167,9 +152,7 @@
             cols="50"
             placeholder="Enter your name"
           ></textarea>
-
           <h5 class="comment__input-container--text">COMMENT</h5>
-
           <textarea
             class="comment__text-container comment__text-container--two"
             name="comment"
@@ -177,13 +160,11 @@
             cols="50"
             placeholder="Add a new comment"
           ></textarea>
-
           <button class="comment__button">COMMENT</button>
         </form>
       </div>
       <div class="comment__default-comment"></div>
     </main>
-    <!-- footer-section -->
     <footer class="footer">
       <div class="footer__main">
         <h2 class="footer__title">Get In Touch</h2>
@@ -198,12 +179,14 @@
             <img src="./assets/icons/SVG/Icon-twitter.svg" alt="Twitter" />
           </a>
         </div>
-
-        <img
-          class="footer__logo-tablet-desktop"
-          src="./assets/logo/Logo-bandsite.svg"
-          alt="Bandsite Logo"
-        />
+        <a href="./index.html" class="footere__nav-logo-container">
+          <img
+            href="./index.html"
+            class="footer__logo-tablet-desktop"
+            src="./assets/logo/Logo-bandsite.svg"
+            alt="Bandsite Logo"
+          />
+        </a>
       </div>
       <section class="footer__contact-container">
         <div class="footer__contact">
@@ -246,17 +229,20 @@
           </a>
         </div>
       </section>
-
-      <img
-        class="footer__logo-mobile"
-        src="./assets/logo/Logo-bandsite.svg"
-        alt="Bandsite Logo"
-      />
+      <a href="./index.html" class="footer__nav-logo-container">
+        <img
+          href="./index.html"
+          class="footer__logo-mobile"
+          src="./assets/logo/Logo-bandsite.svg"
+          alt="Bandsite Logo"
+        />
+      </a>
       <h4 class="footer__copyright">
         Copyright The Bees Knees © 2021 All Rights Reserved
       </h4>
     </footer>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./scripts/band-site-api.js"></script>
     <script src="./scripts/index-page.js"></script>
   </body>
 </html>
